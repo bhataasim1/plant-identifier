@@ -1,5 +1,6 @@
 import { PlantInfoProps } from "@/types/types";
 import Image from "next/image";
+import Table from "./common/Table";
 
 export default function PlantInfo({ info, imageUrl }: PlantInfoProps) {
   return (
@@ -26,28 +27,7 @@ export default function PlantInfo({ info, imageUrl }: PlantInfoProps) {
             {info.description}
           </p>
           <div className="bg-green-50 rounded-lg p-6 mb-6">
-            <table className="w-full">
-              <tbody>
-                <tr>
-                  <td className="font-semibold pr-4 py-2 text-green-800">
-                    Scientific Name:
-                  </td>
-                  <td className="text-gray-700">{info.scientificName}</td>
-                </tr>
-                <tr>
-                  <td className="font-semibold pr-4 py-2 text-green-800">
-                    Family:
-                  </td>
-                  <td className="text-gray-700">{info.family}</td>
-                </tr>
-                <tr>
-                  <td className="font-semibold pr-4 py-2 text-green-800">
-                    Native Region:
-                  </td>
-                  <td className="text-gray-700">{info.nativeRegion}</td>
-                </tr>
-              </tbody>
-            </table>
+            <Table info={info} />
           </div>
         </div>
       </div>
