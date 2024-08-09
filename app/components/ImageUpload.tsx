@@ -53,14 +53,24 @@ export default function ImageUpload({
       <div className="flex justify-center space-x-4">
         <button
           onClick={() => fileInputRef.current?.click()}
-          className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition duration-300 flex items-center"
+          className={`px-4 py-2 text-white rounded-lg transition duration-300 flex items-center ${
+            loading
+              ? "bg-gray-400 cursor-not-allowed"
+              : "bg-green-500 hover:bg-green-600"
+          }`}
+          disabled={loading}
         >
           <Icons.uploadIcon />
           Upload Image
         </button>
         <button
           onClick={() => cameraInputRef.current?.click()}
-          className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition duration-300 flex items-center"
+          className={`px-4 py-2 text-white rounded-lg transition duration-300 flex items-center ${
+            loading
+              ? "bg-gray-400 cursor-not-allowed"
+              : "bg-blue-500 hover:bg-blue-600"
+          }`}
+          disabled={loading}
         >
           <Icons.cameraIcon />
           Take Photo
