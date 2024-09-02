@@ -38,7 +38,7 @@ export default function ImageUpload({
       const result = await model.generateContent([PROMPT, imageData]);
       const response = result.response;
       const text = response.text();
-      console.log("Identified plant:", text);
+      // console.log("Identified plant:", text);
       setPlantInfo(parsePlantInfo(text));
       toast.success("Plant identified successfully!");
     } catch (error) {
