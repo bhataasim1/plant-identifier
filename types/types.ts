@@ -5,6 +5,7 @@ export interface PlantInfoType {
   nativeRegion: string;
   description: string;
   careInstructions: string;
+  medicianValue: string;
 }
 
 export interface PlantInfoProps {
