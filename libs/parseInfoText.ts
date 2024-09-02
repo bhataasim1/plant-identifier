@@ -11,6 +11,7 @@ export function parsePlantInfo(text: string): PlantInfoType {
       nativeRegion: info["Native region"] || "",
       description: info["Brief description"] || "",
       careInstructions: info["Care instructions"] || "",
+      medicianValue: info["Medicinal value"] || "",
     };
   } catch (error) {
     console.error("Error parsing plant info:", error);
@@ -21,6 +22,7 @@ export function parsePlantInfo(text: string): PlantInfoType {
       nativeRegion: "",
       description: "Unable to parse plant information.",
       careInstructions: "",
+      medicianValue: "",
     };
   }
 }
